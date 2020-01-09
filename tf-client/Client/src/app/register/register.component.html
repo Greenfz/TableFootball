@@ -1,0 +1,67 @@
+<div class="container">
+    <mat-card class="my-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image">
+                <mat-icon>save</mat-icon>
+            </div>
+            <mat-card-title>Create new account <span>{{responseMessage}}</span></mat-card-title>
+            <mat-card-subtitle>Join us</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+
+            <form #myForm="ngForm" class="example-form">
+
+                <mat-form-field class="full-width">
+                    <input name="username" [(ngModel)]="costam.username" #nameField='ngModel' minlength="3" required
+                        matInput placeholder="Account name">
+
+                    <mat-error *ngIf="nameField.invalid">
+                        Min 3 characters
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input name="email" [(ngModel)]="costam.email" #emailField='ngModel' required matInput pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                        placeholder="Email">
+                        <mat-error *ngIf="emailField.invalid">
+                            Provide correct email adress
+                        </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input name="password" [(ngModel)]="costam.password" #passwordField='ngModel' required matInput
+                                 placeholder="Password" type="password">
+                    <mat-error *ngIf="passwordField.invalid">
+                        Provide password
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input name="confirmedPassword" #confirmedPasswordField='ngModel' required matInput ngModel
+                                 placeholder="Password" type="password">
+
+                </mat-form-field>
+                <mat-error *ngIf="confirmedPasswordField.value !== passwordField.value && confirmedPasswordField.touched">
+                    Passwords must be the same
+                </mat-error>
+            
+                <br>
+                <br>
+
+                    <mat-checkbox name = "ccc" ngModel #checkBoks = 'ngModel'>Oswiadczam ze oddam pierwsze dziecko w niewole</mat-checkbox>
+                    
+                        
+                    
+                <button [disabled] = "!checkBoks.value || nameField.invalid || emailField.invalid || (confirmedPasswordField.value !== passwordField.value) "
+                mat-raised-button color="warn" (click) = "register()">Create account</button>
+
+
+
+                <br>
+                <br>
+                
+            </form>
+        </mat-card-content>
+        <mat-card-actions> </mat-card-actions>
+    </mat-card>
+</div>

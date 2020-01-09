@@ -1,0 +1,8 @@
+button {
+    margin-right: 15px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
