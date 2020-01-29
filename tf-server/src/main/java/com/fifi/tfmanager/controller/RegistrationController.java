@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-@RestController
 @CrossOrigin
+@RestController
 @Slf4j
 public class RegistrationController {
 
@@ -24,17 +24,22 @@ public class RegistrationController {
 
     @PostMapping("/register")
     ResponseEntity<Boolean> processRegister(@Valid @RequestBody User user, BindingResult bindingResult) {
+        System.out.println(user.getUsername());
         if (bindingResult.hasErrors()) {
-            throw new UserValidationException();
+            throw new UserValidationException("register controller");
         } else {
             registrationService.registerUser(user);
             return new ResponseEntity<>(true, HttpStatus.CREATED);
         }
     }
-
-    @GetMapping("/register")
-    public String verification(@RequestParam String token) {
-        registrationService.enableByToken(token);
-        return "return";
+    @GetMapping("/test")
+    String test(){
+        return "Poszlo";
     }
+
+//    @GetMapping("/register")
+//    public String verification(@RequestParam String token) {
+//        registrationService.enableByToken(token);
+//        return "return";
+//    }
 }

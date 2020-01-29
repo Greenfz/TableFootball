@@ -8,12 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
-//@Primary
-@AllArgsConstructor(onConstructor = @__(@Autowired))
+
+
+@Component("nameLoader")
+@Primary
 @NoArgsConstructor
+@AllArgsConstructor
 public class NameLoader implements LoadUserStrategy {
 
+    @Autowired
     private UserRepository userRepository;
 
     @Override
@@ -21,3 +24,4 @@ public class NameLoader implements LoadUserStrategy {
         return userRepository.findByUsername(name);
     }
 }
+
