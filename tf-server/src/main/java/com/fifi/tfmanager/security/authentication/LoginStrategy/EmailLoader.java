@@ -11,10 +11,9 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component("emailLoader")
-//@AllArgsConstructor(onConstructor = @__(@Autowired))
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class EmailLoader implements LoadUserStrategy {
 
-    @Autowired
     private UserRepository userRepository;
 
     @Override

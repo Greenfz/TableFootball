@@ -12,11 +12,10 @@ import org.springframework.stereotype.Component;
 
 @Component("nameLoader")
 @Primary
-@NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor(onConstructor = @__(@Autowired))
+
 public class NameLoader implements LoadUserStrategy {
 
-    @Autowired
     private UserRepository userRepository;
 
     @Override
