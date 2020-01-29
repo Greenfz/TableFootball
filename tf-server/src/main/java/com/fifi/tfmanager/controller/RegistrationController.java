@@ -3,6 +3,8 @@ package com.fifi.tfmanager.controller;
 
 import com.fifi.tfmanager.exception.registrationExceptions.UserValidationException;
 import com.fifi.tfmanager.model.user.User;
+import com.fifi.tfmanager.security.jwt.AuthenticationRequest;
+import com.fifi.tfmanager.security.jwt.JwtHandler;
 import com.fifi.tfmanager.service.RegistrationService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +21,9 @@ import javax.validation.Valid;
 @Slf4j
 public class RegistrationController {
 
-    @Autowired
-    RegistrationService registrationService;
+    @Autowired RegistrationService registrationService;
+
+    @Autowired JwtHandler jwtHandler;
 
     @PostMapping("/register")
     ResponseEntity<Boolean> processRegister(@Valid @RequestBody User user, BindingResult bindingResult) {
@@ -32,10 +35,12 @@ public class RegistrationController {
             return new ResponseEntity<>(true, HttpStatus.CREATED);
         }
     }
-    @GetMapping("/test")
-    String test(){
-        return "Poszlo";
+
+    @PostMapping("/jwt")
+    ResponseEntity<?> loginJWT(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
+        return ResponseEntity.ok(jwtHandler.prepareToken(authenticationRequest));
     }
+
 
 //    @GetMapping("/register")
 //    public String verification(@RequestParam String token) {

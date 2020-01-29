@@ -29,8 +29,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         log.info("Security configuration initialized");
         http.authorizeRequests()
-                .antMatchers("/test").authenticated()
-                .anyRequest().permitAll()
+                .antMatchers("/jwt").permitAll()
+                .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .and()
@@ -41,11 +41,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
         auth.userDetailsService(authenticationHandler);
     }
 
-
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
