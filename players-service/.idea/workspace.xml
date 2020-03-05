@@ -2,55 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aea01f29-c903-43bf-b021-caf1202b138b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/fifi/players/repository/PlayerRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JwtAuthentication/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JwtEXAMPLE/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/TfmanagerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/controller/RegistrationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/dao/TokenRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/dao/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/dao/projection/TokenIdOnly.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/email/AsyncMailSender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/event/as.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/event/urlObserver/ApplicationUrlObservable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/event/urlObserver/ApplicationUrlObserver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/event/urlObserver/UrlReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/exception/ExceptionResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/exception/RegisterExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/exception/registrationExceptions/UserDuplicatedException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/exception/registrationExceptions/UserNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/exception/registrationExceptions/UserValidationException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/model/token/TokenGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/model/token/TokenInjector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/model/token/TokenReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/model/token/VerificationToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/model/user/NewUserCreator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/model/user/NullObjectUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/model/user/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/model/user/UserEnabler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/security/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/security/authentication/AuthenticationHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/security/authentication/LoginStrategy/EmailLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/security/authentication/LoginStrategy/LoadUserStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/security/authentication/LoginStrategy/NameLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/security/authority/CustomUserDetails.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/security/corsConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/security/jwt/AuthenticationRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/security/jwt/AuthenticationResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/security/jwt/JwtHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/security/jwt/JwtUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/service/EncryptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/service/RegistrationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/validation/PasswordConstraintValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/java/com/fifi/tfmanager/validation/ValidPassword.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/test/java/com/fifi/tfmanager/TfmanagerApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/test/java/com/fifi/tfmanager/dao/UserRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/test/java/com/fifi/tfmanager/event/urlObserver/UrlReceiverTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/test/java/com/fifi/tfmanager/model/token/TokenReceiverTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tf-server/src/test/java/com/fifi/tfmanager/model/user/UserEnablerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tf-server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tf-server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tf-services/tf-server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
@@ -115,6 +67,7 @@
       <workItem from="1582809900567" duration="1327000" />
       <workItem from="1582981361492" duration="14876000" />
       <workItem from="1583067178590" duration="1850000" />
+      <workItem from="1583409937745" duration="17000" />
     </task>
     <servers />
   </component>
