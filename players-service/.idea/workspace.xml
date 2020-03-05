@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aea01f29-c903-43bf-b021-caf1202b138b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../tf-server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tf-server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +68,7 @@
       <workItem from="1582981361492" duration="14876000" />
       <workItem from="1583067178590" duration="1850000" />
       <workItem from="1583409937745" duration="17000" />
+      <workItem from="1583410345404" duration="6000" />
     </task>
     <servers />
   </component>
