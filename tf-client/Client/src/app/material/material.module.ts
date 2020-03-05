@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
-import {MatButtonModule, MatToolbarModule, MatIconModule, MatCardModule, MatFormFieldModule, MatInputModule, MatCheckboxModule} from '@angular/material';
-
+import {MatButtonModule, MatToolbarModule, MatIconModule, MatCardModule, MatTooltipModule, MatTabsModule ,MatOptionModule, MatSelectModule, 
+    MatInputModule, MatCheckboxModule, MatDividerModule, MatListModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field'; 
 
 const materials = [
   MatButtonModule,
@@ -9,7 +12,16 @@ const materials = [
   MatCardModule,
   MatFormFieldModule,
   MatInputModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatDividerModule,
+  MatListModule,
+  MatTooltipModule,
+  MatTabsModule,
+  BrowserAnimationsModule,
+  FormsModule,
+  ReactiveFormsModule,
+  MatOptionModule,
+  MatSelectModule
 ];
 
 @NgModule({

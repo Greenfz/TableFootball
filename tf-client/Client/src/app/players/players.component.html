@@ -1,0 +1,41 @@
+<div>
+<mat-tab-group [backgroundColor]="'warn'">
+    
+<mat-tab label="Add a new player">
+      <div class="container">
+        <mat-card >
+            <mat-card-content>
+              <form (ngSubmit)="func()">
+                  <div class="form-group">
+                      <label for="playerName">Player's Name</label>
+                      <input type="text" class="form-control" name="playerName" placeholder="Example player name :>"
+                            [(ngModel)]="model.a" #nameRef="ngModel" >
+                      <small *ngIf="nameRef.touched" id="emailHelp" class="form-text text-muted">You can change it whenever you want</small>
+                  </div>
+                  <div class="form-group">
+                      <label for="pinNumberId">Secret PIN number</label>
+                      <input type="password" class="form-control" name="pinNumber" placeholder="4 numbers"
+                            [(ngModel)]="model.s" #pinRef="ngModel">
+                  </div>
+                  <div class="form-group">
+                      <label for="playerEmailId">Player's email</label>
+                      <input type="email" class="form-control" name="email" placeholder="example@example.org"
+                            [(ngModel)]="model.d" #mailRef="ngModel">
+                  </div>
+                  <div class="form-group">
+                      <button class="btn btn-warning">Create player</button>
+                  </div>  
+              </form>
+          </mat-card-content>
+      </mat-card>   
+    </div>
+</mat-tab>
+
+
+<mat-tab label="Second"> </mat-tab>
+        
+
+<mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
+</div>
+

@@ -12,7 +12,11 @@ import { MaterialModule } from './material/material.module';
 import { FormsModule } from '@angular/forms';
 
 import {HttpClientModule} from '@angular/common/http';
-import { AuthorizationService } from './service/authorization.service';
+import { HttpService } from './service/http.service';
+import { MainComponent } from './main/main.component';
+import { PlayersComponent } from './players/players.component';
+
+
 
 
 @NgModule({
@@ -20,7 +24,9 @@ import { AuthorizationService } from './service/authorization.service';
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    MainComponent,
+    PlayersComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,7 @@ import { AuthorizationService } from './service/authorization.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AuthorizationService],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

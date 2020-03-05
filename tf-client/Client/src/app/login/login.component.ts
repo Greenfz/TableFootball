@@ -1,24 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthorizationService } from '../service/authorization.service';
+import { HttpService } from '../service/http.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-
-  registeredEmail : string = '';
+export class LoginComponent {
+ 
+  _pathToLogin: string = '/login'
+  _registeredEmail : string = '';   // ??????
   userDetails = {}
+  
+  constructor(
+    private _httpService: HttpService
+    ) { }
 
-  constructor(private _authService: AuthorizationService) { }
-
-  ngOnInit() {
-  }
 
   loginMethod(){
     console.log(this.userDetails);
-    this._authService.loginUser(this.userDetails)
+
+    this._httpService.postToEndpoint(this.userDetails, this._pathToLogin)
     .subscribe(
       res => console.log(res),
       err => console.log(localStorage),

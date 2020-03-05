@@ -6,3 +6,7 @@ button {
     display: flex;
     justify-content: space-between;
 }
+
+.mat-tooltip {
+    font-size: 15rem !important;
+  }
